@@ -1,0 +1,19 @@
+{
+  "name": "release-codename",
+  "version": "1.0.0",
+  "description": "Generate release codenames",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Jeremy Forsythe <jdforsythe@gmail.com>",
+  "license": "MIT",
+  "preferGlobal": true,
+  "bin": {
+    "release-codename": "index.js"
+  },
+  "dependencies": {
+    "cli-color": "^1.1.0",
+    "command-line-args": "^3.0.0",
+    "project-name-generator": "^2.1.2"
+  }
+}
