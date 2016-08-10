@@ -23,6 +23,10 @@ const optionDefinitions = [
   {
     name: 'count',
     type: Number
+  },
+  {
+    name: 'alliterative',
+    type: Boolean
   }
 ];
 
@@ -34,6 +38,7 @@ if (options.help) {
   console.log(color.green('--addnumber') + ' - add a random number to the codename');
   console.log(color.green('--words=#') + ' - specify the number of words in the codename');
   console.log(color.green('--count=#') + ' - specify the number of codenames to display');
+  console.log(color.green('--alliterative') + ' - make alliterative codenames');
   process.exit(0);
 }
 
@@ -75,6 +80,11 @@ function getGenOptions(opts) {
 
   if (opts.addnumber) {
     genOptions.number = true;
+    setOption = true;
+  }
+
+  if (opts.alliterative) {
+    genOptions.alliterative = true;
     setOption = true;
   }
 
