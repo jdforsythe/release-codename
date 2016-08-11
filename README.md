@@ -20,3 +20,4 @@ release-codename [options]
   - **--words=_#_** _specify the number of words in the codename_
   - **--count=_#_** _specify the number of codenames to generate_
   - **--alliterative** _show alliterative codenames_
+  - **--letter=b** _show alliterative codenames starting with a letter (no need to set `--alliterative` when using `--letter`)_

@@ -27,6 +27,10 @@ const optionDefinitions = [
   {
     name: 'alliterative',
     type: Boolean
+  },
+  {
+    name: 'letter',
+    type: String
   }
 ];
 
@@ -39,6 +43,7 @@ if (options.help) {
   console.log(color.green('--words=#') + ' - specify the number of words in the codename');
   console.log(color.green('--count=#') + ' - specify the number of codenames to display');
   console.log(color.green('--alliterative') + ' - make alliterative codenames');
+  console.log(color.green('--letter="s"') + ' - make alliterative codenames starting with this letter');
   process.exit(0);
 }
 
@@ -85,6 +90,11 @@ function getGenOptions(opts) {
 
   if (opts.alliterative) {
     genOptions.alliterative = true;
+    setOption = true;
+  }
+
+  if (opts.letter) {
+    genOptions.alliterative = opts.letter.substring(0, 1).toLowerCase();
     setOption = true;
   }
 
