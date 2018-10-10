@@ -4,34 +4,13 @@ var commandLineArgs = require('command-line-args');
 var color = require('cli-color');
 
 const optionDefinitions = [
-  {
-    name: 'help',
-    type: Boolean
-  },
-  {
-    name: 'nodash',
-    type: Boolean
-  },
-  {
-    name: 'addnumber',
-    type: Boolean
-  },
-  {
-    name: 'words',
-    type: Number
-  },
-  {
-    name: 'count',
-    type: Number
-  },
-  {
-    name: 'alliterative',
-    type: Boolean
-  },
-  {
-    name: 'letter',
-    type: String
-  }
+  { name: 'help', type: Boolean },
+  { name: 'nodash', type: Boolean },
+  { name: 'addnumber', type: Boolean },
+  { name: 'words', type: Number },
+  { name: 'count', type: Number },
+  { name: 'alliterative', type: Boolean },
+  { name: 'letter', type: String }
 ];
 
 const options = commandLineArgs(optionDefinitions);
